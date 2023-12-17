@@ -1,23 +1,21 @@
 """
-Implementando código de pesquisa binária
+A pesquisa binária é um algoritmo de busca eficiente utilizado em conjuntos de dados ordenados. 
+O processo ocorre da seguinte forma:
 
-Este método consiste em dividir a lista escolhida ao meio e buscar em sublistas
-Diminuindo o tempo de busca e evitando uma procura no array inteiro
+Condição Inicial: O algoritmo começa com todo o conjunto de dados ordenado.
 
-O método de pesquisa binária recebe a lista a ser percorrida e o elemento a ser procurado
-Faz uma busca na lista da sequinte forma:
-Inicia com duas variáveis, alto e baixo
-Na qual a variável "alto" significa o tamanho do array a ser percorrido por vez
-O método entra no laço while, o qual vai percorrer o array de busca
-Este que será uma metade da lista requisitada
-Ele reparte o array pela metade gerando a variável meio
+Comparação: O algoritmo compara o elemento a ser encontrado com o elemento no meio do conjunto.
 
-A função usa a variável chute, que vai ser o elemento central
-Se o elemento a ser procurado for achado ele retorna a posição deste
-Caso o chute estiver acima, ele atualiza a variável alto e novamente testa o meio dessa sublista
-Caso for menor, atualiza a variável alto e faz o mesmo procedimento
-E caso o elemento não esteja na lista, retorna None
+Divisão do Conjunto: Se o elemento for igual ao do meio, a busca é concluída. 
+Caso contrário, o conjunto é dividido ao meio, e a busca continua na metade apropriada, 
+descartando a metade onde o elemento não pode estar.
 
+Repetição: Os passos 2 e 3 são repetidos na metade restante do conjunto 
+até que o elemento seja encontrado ou o conjunto seja reduzido a zero.
+
+A principal vantagem da pesquisa binária é a sua eficiência, 
+pois a cada comparação, o conjunto de dados é reduzido pela metade. 
+No entanto, é importante notar que a pesquisa binária só funciona em conjuntos de dados ordenados.
 """
 
 def pesquisaBinaria(lista, item):
